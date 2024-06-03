@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to check if a room code is available
     async function isRoomCodeAvailable(roomCode) {
         try {
-            const response = await fetch(`/check-room-code?roomCode=${roomCode}`, { method: 'GET' });
+            const response = await fetch(`https://ancient-refuge-10338.herokuapp.com/check-room-code?roomCode=${roomCode}`, { method: 'GET' });
             const data = await response.json();
             return data.available;
         } catch (error) {
